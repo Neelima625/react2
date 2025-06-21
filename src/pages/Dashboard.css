@@ -10,13 +10,12 @@ a {
   color: inherit;
 }
 
-
+/* Carousel */
 .carousel {
   position: relative;
   width: 90%;
   left: 5%;
-  text-align: center;
-  height: 500px;
+  height: 400px;
   overflow: hidden;
   margin: 1rem 0;
   border-radius: 12px;
@@ -57,7 +56,7 @@ a {
 
 .carousel-overlay h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .carousel-overlay p {
@@ -95,23 +94,16 @@ a {
 /* Main Section */
 .main-section {
   display: flex;
-  flex-wrap: wrap;
-  margin: 2rem;
+  flex-direction: column;
   gap: 2rem;
+  margin: 2rem auto;
+  width: 90%;
 }
 
-.sidebar {
-  flex: 1;
-  min-width: 250px;
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-}
-/* Profile Section Styles */
+/* Profile Section */
 .profile-container {
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 20px 0;
 }
 
 .profile-section {
@@ -120,10 +112,11 @@ a {
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  flex-direction: column;
 }
 
 .profile-image-container {
-  width: 30%;
+  width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -132,17 +125,17 @@ a {
 }
 
 .profile-image {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #e0e8ff;
+  border: 4px solid #e0e8ff;
   box-shadow: 0 8px 16px rgba(74, 144, 226, 0.2);
 }
 
 .profile-content {
-  width: 70%;
-  padding: 25px;
+  width: 100%;
+  padding: 20px;
 }
 
 .profile-header {
@@ -151,18 +144,26 @@ a {
   align-items: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .profile-header h2 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #2c3e50;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .payment-options {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   margin: 10px 0;
+  flex-wrap: wrap;
 }
 
 .payment-toggle {
@@ -170,8 +171,8 @@ a {
   align-items: center;
   cursor: pointer;
   position: relative;
-  padding-left: 45px;
-  height: 24px;
+  padding-left: 40px;
+  height: 20px;
 }
 
 .payment-toggle input {
@@ -186,10 +187,10 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 40px;
-  height: 22px;
+  width: 36px;
+  height: 20px;
   background-color: #e0e0e0;
-  border-radius: 11px;
+  border-radius: 10px;
   transition: .4s;
 }
 
@@ -198,8 +199,8 @@ a {
   content: "";
   height: 16px;
   width: 16px;
-  left: 3px;
-  bottom: 3px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   border-radius: 50%;
   transition: .4s;
@@ -210,27 +211,21 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(18px);
+  transform: translateX(16px);
 }
 
 .toggle-label {
   margin-left: 8px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #34495e;
   font-weight: 500;
-}
-/* Add these styles to your existing CSS */
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
 }
 
 .update-icon {
   background: none;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -245,50 +240,35 @@ input:checked + .slider:before {
   transform: rotate(15deg);
 }
 
-.update-icon:active {
-  transform: scale(0.95) rotate(15deg);
-}
-
-
-.profile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-
-
 .profile-details {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .detail-row {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .detail-label {
   font-weight: 600;
   color: #2c3e50;
-  width: 100px;
+  width: 80px;
+  font-size: 0.9rem;
 }
 
 .detail-value {
   color: #34495e;
+  font-size: 0.9rem;
 }
 
 .balance-cards {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .balance-card {
-  flex: 1;
-  min-width: 200px;
+  width: 100%;
   background: #f9faff;
   border-radius: 12px;
   padding: 15px;
@@ -315,7 +295,7 @@ input:checked + .slider:before {
 }
 
 .balance-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #7f8c8d;
   margin-bottom: 4px;
 }
@@ -325,7 +305,7 @@ input:checked + .slider:before {
 }
 
 .balance-amount {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #2c3e50;
 }
@@ -334,103 +314,85 @@ input:checked + .slider:before {
   color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .profile-section {
-    flex-direction: column;
-  }
-  
-  .profile-image-container,
-  .profile-content {
-    width: 100%;
-  }
-  
-  .profile-image-container {
-    padding: 30px;
-  }
-  
-  .profile-image {
-    width: 140px;
-    height: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-  .balance-cards {
-    flex-direction: column;
-  }
-  
-  .balance-card {
-    min-width: 100%;
-  }
-  
-  .payment-options {
-    flex-wrap: wrap;
-  }
-}
 /* Services Section */
 .services-modern {
-  width: 90%;
-  margin: 40px auto;
+  width: 100%;
+  margin: 20px 0;
   text-align: center;
   background-color: #eaf6fb;
-  padding: 40px 20px;
-  border-radius: 20px;
+  padding: 30px 15px;
+  border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  animation: fadeIn 1s ease;
 }
 
 .section-header {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #12264d;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .section-subtext {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #5c6b7c;
-  max-width: 700px;
-  margin: 0 auto 30px;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  padding: 0 10px;
 }
 
 .service-grid-modern {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
 .service-card-modern {
   background: white;
-  padding: 25px;
-  border-radius: 16px;
+  padding: 20px;
+  border-radius: 12px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .service-card-modern:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #4477aadd;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .service-card-modern h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #1b2f4b;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 
 .service-card-modern p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #5c6b7c;
+}
+
+/* Bottom Banner */
+.bottom-banner {
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bottom-banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 /* Animations */
@@ -445,41 +407,65 @@ input:checked + .slider:before {
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .main-section {
-    flex-direction: column;
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  .carousel {
+    height: 500px;
   }
-
-  .carousel-text {
-    font-size: 1.2rem;
-    left: 15px;
-    bottom: 10px;
+  
+  .profile-section {
+    flex-direction: row;
   }
-}
-.bottom-banner {
-  width: 60%;
-  margin: 40px auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  animation: fadeIn 1s ease;
-}
-
-.bottom-banner-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
+  
+  .profile-image-container {
+    width: 30%;
+    padding: 20px;
+  }
+  
+  .profile-image {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .profile-content {
+    width: 70%;
+    padding: 25px;
+  }
+  
+  .profile-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .balance-cards {
+    flex-direction: row;
+  }
+  
+  .balance-card {
+    min-width: 200px;
+  }
+  
+  .service-grid-modern {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .section-header {
+    font-size: 2rem;
+  }
+  
+  .section-subtext {
+    font-size: 1rem;
+    max-width: 700px;
+  }
+  
   .bottom-banner {
-  width: 80%;
-  margin: 40px auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  animation: fadeIn 1s ease;
+    width: 60%;
+  }
 }
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+  .main-section {
+    max-width: 1200px;
+  }
 }
