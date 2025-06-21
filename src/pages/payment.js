@@ -469,7 +469,7 @@ const BeneficiaryList = () => {
                   onChange={handleInputChange}
                   required
                 >
-                  <option disabled>Select a bank</option>
+                  <option value="">Select a bank</option>
       <option value="AUSAMML">A U SAMML FINANCE BANK</option>
       <option value="ADARASH">ADARASH CO-OP URBAN BANK</option>
       <option value="AIRTEL">AIRTEL PAYMENTS BANK</option>
